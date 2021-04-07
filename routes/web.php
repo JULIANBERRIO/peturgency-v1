@@ -28,7 +28,12 @@ Route::view('/contact', 'contact')->name('contact');
  */
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->middleware(['auth:sanctum', 'verified'])->name('dashboard');
 
-//Route::get('users',[UserController::class,'getuser'])->name('usershow');
+# RUTAS DE USUARIO
+Route::get('/admin/user', [UserController::class, 'list'])->middleware(['auth:sanctum', 'verified'])->name('user-list');
+Route::get('/admin/user-create', [UserController::class, 'create'])->middleware(['auth:sanctum', 'verified'])->name('user-create');
+Route::get('/admin/user-update/{user}', [UserController::class, 'update'])->middleware(['auth:sanctum', 'verified'])->name('user-update');
+Route::post('/admin/user-save/{user?}', [UserController::class, 'save'])->middleware(['auth:sanctum', 'verified'])->name('user-save');
+Route::delete('/admin/user-delete/{user}', [UserController::class, 'delete'])->middleware(['auth:sanctum', 'verified'])->name('user-delete');
 
 
 

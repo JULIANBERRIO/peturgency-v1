@@ -10,8 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
-{
+class User extends Authenticatable {
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
@@ -20,7 +19,6 @@ class User extends Authenticatable
 
     /**
      * The attributes that are mass assignable.
-     *
      * @var array
      */
     protected $fillable = [
@@ -28,12 +26,13 @@ class User extends Authenticatable
         'email',
         'phone',
         'gender',
+        'role',
+        'status',
         'password',
     ];
 
     /**
      * The attributes that should be hidden for arrays.
-     *
      * @var array
      */
     protected $hidden = [
@@ -45,7 +44,6 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be cast to native types.
-     *
      * @var array
      */
     protected $casts = [
@@ -54,7 +52,6 @@ class User extends Authenticatable
 
     /**
      * The accessors to append to the model's array form.
-     *
      * @var array
      */
     protected $appends = [
