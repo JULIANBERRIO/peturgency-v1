@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -14,21 +15,23 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-
-Route::get('users',[UserController::class,'getuser'])->name('usershow');
-
-
+/**
+ * Rutas de sitio web
+ */
 Route::view('/', 'index')->name('index');
-
 Route::view('/about', 'about')->name('about');
-
 Route::view('/contact', 'contact')->name('contact');
+
+
+/**
+ * Rutas de administración
+ */
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->middleware(['auth:sanctum', 'verified'])->name('dashboard');
+
+//Route::get('users',[UserController::class,'getuser'])->name('usershow');
+
+
+
+
+
 
