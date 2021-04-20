@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MascotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,9 @@ Route::post('/admin/user-save/{user?}', [UserController::class, 'save'])->middle
 Route::delete('/admin/user-delete/{user}', [UserController::class, 'delete'])->middleware(['auth:sanctum', 'verified'])->name('user-delete');
 
 
-
-
-
-
+# RUTAS DE MASCOTA
+Route::get('/admin/mascota', [MascotaController::class, 'list'])->middleware(['auth:sanctum', 'verified'])->name('mascota-list');
+Route::get('/admin/mascota-create', [MascotaController::class, 'create'])->middleware(['auth:sanctum', 'verified'])->name('mascota-create');
+Route::get('/admin/mascota-update/{mascota}', [MascotaController::class, 'update'])->middleware(['auth:sanctum', 'verified'])->name('mascota-update');
+Route::post('/admin/mascota-save/{mascota?}', [MascotaController::class, 'save'])->middleware(['auth:sanctum', 'verified'])->name('mascota-save');
+Route::delete('/admin/mascota-delete/{mascota}', [MascotaController::class, 'delete'])->middleware(['auth:sanctum', 'verified'])->name('mascota-delete');
