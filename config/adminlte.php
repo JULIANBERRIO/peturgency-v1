@@ -187,7 +187,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -229,6 +229,13 @@ return [
             'search' => false,
             'topnav' => true,
         ],
+
+        [
+            'text' => 'Dashboard',
+            'url' => 'dashboard',
+            'icon' => 'fas fa-tachometer-alt',
+        ],
+
         [
             'header' => 'AMINISTRACIÓN'
         ],
@@ -236,6 +243,7 @@ return [
             'text' => 'Usuarios',
             'url' => 'admin/user',
             'icon' => 'fas fa-fw fa-user',
+            'can' => 'user-list',
         ],
 
 
@@ -243,6 +251,7 @@ return [
             'text' => 'Mascotas',
             'url' => 'admin/pet',
             'icon' => 'fas fa-paw',
+            'can' => '',
 
         ],
 

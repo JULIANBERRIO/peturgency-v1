@@ -15,8 +15,8 @@ class UserController extends Controller {
      */
     public function list() {
         $Users = User::query()  //Hago una query
-        ->join('model_has_roles', 'users.id','=','model_id') //Inner join a la tabla model has roles para tener el id del rol
-        ->join('roles','model_has_roles.role_id','=','roles.id') //Inner join a la tabla roles con el id que sacamos en el otro join para sacar el nombre del rol
+        ->leftJoin('model_has_roles', 'users.id','=','model_id') //Inner join a la tabla model has roles para tener el id del rol y leftjoin busca y muestra el dato que tenga las tablas
+        ->leftJoin('roles','model_has_roles.role_id','=','roles.id') //Inner join a la tabla roles con el id que sacamos en el otro join para sacar el nombre del rol
         ->select([  //Selecciono
             'users.id',
             'users.name',
@@ -26,7 +26,7 @@ class UserController extends Controller {
             'roles.name as nombreRol' //Agregue alias por duplicidad de nombre de atributo
         ])
         ->get();
-    
+
         return view('users.list', compact('Users'));
     }
 

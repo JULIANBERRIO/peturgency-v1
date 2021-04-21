@@ -19,7 +19,7 @@ class CreatePetsTable extends Migration
             $table->string('age', 50)->nullable();
             $table->string('race', 60)->nullable();
             $table->string('gender', 20)->nullable();
-            $table->string('description', 60)->nullable();
+            $table->string('description', 300)->nullable();
             $table->timestamps();
 
         });
