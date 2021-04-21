@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mascota extends Model
+class Pet extends Model
 
 
 
@@ -16,10 +16,10 @@ class Mascota extends Model
      */
     protected $fillable = [
         'name',
-        'edad',
-        'raza',
+        'age',
+        'race',
         'gender',
-        'descripcion',
+        'description',
         
     ];
 

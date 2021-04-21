@@ -3,7 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\MascotaController;
+use App\Http\Controllers\PetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +38,8 @@ Route::delete('/admin/user-delete/{user}', [UserController::class, 'delete'])->m
 
 
 # RUTAS DE MASCOTA
-Route::get('/admin/mascota', [MascotaController::class, 'list'])->middleware(['auth:sanctum', 'verified'])->name('mascota-list');
-Route::get('/admin/mascota-create', [MascotaController::class, 'create'])->middleware(['auth:sanctum', 'verified'])->name('mascota-create');
-Route::get('/admin/mascota-update/{mascota}', [MascotaController::class, 'update'])->middleware(['auth:sanctum', 'verified'])->name('mascota-update');
-Route::post('/admin/mascota-save/{mascota?}', [MascotaController::class, 'save'])->middleware(['auth:sanctum', 'verified'])->name('mascota-save');
-Route::delete('/admin/mascota-delete/{mascota}', [MascotaController::class, 'delete'])->middleware(['auth:sanctum', 'verified'])->name('mascota-delete');
+Route::get('/admin/pet', [PetController::class, 'list'])->middleware(['auth:sanctum', 'verified'])->name('pet-list');
+Route::get('/admin/pet-create', [PetController::class, 'create'])->middleware(['auth:sanctum', 'verified'])->name('pet-create');
+Route::get('/admin/pet-update/{pet}', [PetController::class, 'update'])->middleware(['auth:sanctum', 'verified'])->name('pet-update');
+Route::post('/admin/pet-save/{pet?}', [PetController::class, 'save'])->middleware(['auth:sanctum', 'verified'])->name('pet-save');
+Route::delete('/admin/pet-delete/{pet}', [PetController::class, 'delete'])->middleware(['auth:sanctum', 'verified'])->name('pet-delete');
