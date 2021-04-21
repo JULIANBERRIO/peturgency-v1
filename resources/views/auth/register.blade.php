@@ -52,21 +52,19 @@
                            title="Es obligatorio que ingreses tu numero celular" required>
                 </div>
             </div>
-            <div class="input-div pass">
-                <div class="i">
-                    <i class="fas fa-venus-mars"></i>
+            <div >
+                <div>
+                    <div >
+                        <center>
+                            <select name="gender" id="gender" class="select-css">
+                                <option>Selecciona tu género</option>
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                                <option value="Mujer">Otro</option>
+                            </select>
+                        </center>   
+                    </div >
                 </div>
-                <div class="div">
-                    <h5>Genero</h5>
-                    <br>
-                    <select name="gender" id="gender" class="styled-select">
-                        <option>Selecciona tu género</option>
-                        <option value="Hombre">Hombre</option>
-                        <option value="Mujer">Mujer</option>
-                    </select>
-                </div>
-                <br>
-
             </div>
             <div class="input-div pass">
                 <div class="i">
