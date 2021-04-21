@@ -55,8 +55,15 @@
                         </div>
                         <div class="div">
                             <h5>Genero</h5>
-                            <input type="text" name="gender" class="input" title="Es obligatorio que ingreses tu genero"  required>
+                            <br>
+                            <select name="gender" id="gender" class="styled-select">
+                                <option>Selecciona tu género</option>
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                            </select>
                     </div>
+                    <br>
+
                     </div>
                     <div class="input-div pass">
                         <div class="i">
