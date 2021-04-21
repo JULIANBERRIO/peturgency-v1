@@ -13,7 +13,7 @@
 
             <div class="row">
                 <div class="col text-right">
-                    <a href="{{ route('mascota-create') }}" class="btn btn-success">
+                    <a href="{{ route('pet-create') }}" class="btn btn-success">
                         <i class="fa fa-save"></i>
                         Agregar Mascota
                     </a>
@@ -34,25 +34,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($Mascotas as $mascota)
+                    @foreach($Pets as $pet)
                         <tr>
-                            <td> {{ $mascota->id }}</td>
-                            <td> {{ $mascota->name }}</td>
-                            <td> {{ $mascota->edad }}</td>
-                            <td> {{ $mascota->raza }}</td>
-                            <td> {{ $mascota->descripcion}}</td>
+                            <td> {{ $pet->id }}</td>
+                            <td> {{ $pet->name }}</td>
+                            <td> {{ $pet->age }}</td>
+                            <td> {{ $pet->race }}</td>
+                            <td> {{ $pet->description}}</td>
                             
                             <td class="text-center">
                                 <a href="javascript:void(0)" class="btn btn-sm btn-danger"
-                                   onclick="deleteMascota('{{$mascota->id}}')">
+                                   onclick="deletePet('{{$pet->id}}')">
                                     <i class="fa fa-trash"></i>
-                                    <form action="{{ route('mascota-delete', $mascota)}}" id="delete-mascota-{{$mascota->id}}"
+                                    <form action="{{ route('pet-delete', $pet)}}" id="delete-pet-{{$pet->id}}"
                                           method="POST">
                                         @csrf
                                         @method('delete')
                                     </form>
                                 </a>
-                                <a href="{{ route('mascota-update', $mascota) }}" class="btn btn-sm btn-primary">
+                                <a href="{{ route('pet-update', $pet) }}" class="btn btn-sm btn-primary">
                                     <i class="fa fa-pen"></i>
                                 </a>
                             </td>
@@ -61,9 +61,9 @@
                 </tbody>
             </table>
             <script type="text/javascript">
-                function deleteMascota(id) {
+                function deletePet(id) {
                     if (confirm('¿Realmente desea eliminar este registro?')) {
-                        document.getElementById('delete-mascota-' + id).submit()
+                        document.getElementById('delete-pet-' + id).submit()
                     }
                 }
             </script>

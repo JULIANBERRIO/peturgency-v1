@@ -10,7 +10,7 @@
     <div class="card">
         <div class="card-body">
 
-            <form class="col-sm-4" action="{{ route('mascota-save') }}" method="POST">
+            <form class="col-sm-4" action="{{ route('pet-save') }}" method="POST">
                 @csrf
 
                 <div class="form-group">
@@ -20,18 +20,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="edad">Edad</label>
-                    <input type="number" id="edad" name="edad" class="form-control" placeholder="12"
+                    <label for="age">Edad</label>
+                    <input type="number" id="age" name="age" class="form-control" placeholder="12"
                            required>
                 </div>
 
                 <div class="form-group">
-                    <label for="raza">Raza</label>
-                    <input type="text" id="raza" name="raza" class="form-control" placeholder="Raza">
+                    <label for="race">Raza</label>
+                    <input type="text" id="race" name="race" class="form-control" placeholder="Raza">
                 </div>
                 <div class="form-group">
-                    <label for="raza">Descripcion</label>
-                    <input type="text" id="descripcion" name="descripcion" class="form-control" placeholder="Hola">
+                    <label for="description">Descripcion</label>
+                    <input type="text" id="description" name="description" class="form-control" placeholder="Hola">
                 </div>
 
                 <div class="form-group">
