@@ -237,6 +237,17 @@ return [
             'url' => 'admin/user',
             'icon' => 'fas fa-fw fa-user',
         ],
+
+
+        [
+            'text' => 'Mascotas',
+            'url' => 'admin/mascota',
+            'icon' => 'fas fa-paw',
+          
+        ],
+
+
+
 //        [
 //            'text' => 'Configuración',
 //            'url' => 'settings',

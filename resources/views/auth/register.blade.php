@@ -14,13 +14,14 @@
             <div class="img">
                 <img src="img/bg.png">
             </div>
-            <div class="login-content">
+            <div id="login"class="login-content">
                 <form action="{{route('register')}}" method="POST">
                     @csrf
+                   
                     <img src="img/favicon.png">
-                    <br>
-                    <h3 class="title">Bienvenido al Sistema Pet Urgency</h3>
-                    <br>
+                    
+				    <h4 class="title">Bienvenido al Sistema Pet Urgency</h4>
+				     
                     <div class="input-div one">
                     <div class="i">
                             <i class="fas fa-user"></i>
@@ -71,8 +72,9 @@
                     <a href="#">¿Has olvidado tu contraseña? </a>
                     <input type="submit" class="btn btn-primary bnt-block"  name="accion" value="Registrarse">
                     <a href="{{route('index')}}" class="btn btn-primary">Regresar</a>
-
-
+                    
+                    
+                    
                 </form>
             </div>
         </div>
