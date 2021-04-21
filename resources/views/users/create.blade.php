@@ -42,12 +42,14 @@
 
                 <div class="form-group">
                     <label for="role">Perfil</label>
-                    <select name="role" id="role" class="form-control" required>
-                        <option value="Admin">Administrador</option>
-                        <option value="Cliente">Cliente</option>
-                        <option value="Veterinaria">Veterinaria</option>
-                        <option value="Medico">Medico</option>
-                    </select>
+                    @foreach($roles as $rol)
+                        <div>
+                            <label for="rol{{$rol->id}}">
+                                <input id="rol{{$rol->id}}" type="checkbox" name="roles" value="{{$rol->id}}">
+                                {{$rol->name}}
+                            </label>
+                        </div>
+                    @endforeach
                 </div>
 
                 <div class="form-group">

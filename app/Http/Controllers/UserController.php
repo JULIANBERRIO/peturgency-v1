@@ -14,13 +14,26 @@ class UserController extends Controller {
      * @return mixed
      */
     public function list() {
-        $Users = User::all();
+        $Users = User::query()  //Hago una query
+        ->join('model_has_roles', 'users.id','=','model_id') //Inner join a la tabla model has roles para tener el id del rol
+        ->join('roles','model_has_roles.role_id','=','roles.id') //Inner join a la tabla roles con el id que sacamos en el otro join para sacar el nombre del rol
+        ->select([  //Selecciono
+            'users.id',
+            'users.name',
+            'users.email',
+            'users.status',
+            'users.gender',
+            'roles.name as nombreRol' //Agregue alias por duplicidad de nombre de atributo
+        ])
+        ->get();
+    
         return view('users.list', compact('Users'));
     }
 
 
     public function create() {
-        return view('users.create');
+        $roles = Role::all();
+        return view('users.create',compact('roles'));
     }
 
     public function update(User $user) {

@@ -46,7 +46,7 @@
                     <label for="role">Asignar Rol</label>
                     @foreach($roles as $rol)
                         <div>
-                            <label for="rol{{$rol->id}}>
+                            <label for="rol{{$rol->id}}">
                                 <input id="rol{{$rol->id}}" type="checkbox" name="roles" value="{{$rol->id}}">
                                 {{$rol->name}}
                             </label>

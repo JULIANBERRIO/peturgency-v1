@@ -28,6 +28,7 @@
                         <th>Nombre</th>
                         <th>Correo Electrónico</th>
                         <th>Perfil</th>
+                        <th>Genero</th>
                         <th>Estado</th>
                         <th>&nbsp;</th>
                     </tr>
@@ -38,7 +39,8 @@
                             <td> {{ $user->id }}</td>
                             <td> {{ $user->name }}</td>
                             <td> {{ $user->email }}</td>
-                            <td> {{ $user->role }}</td>
+                            <td> {{ $user->nombreRol }}</td>
+                            <td> {{$user->gender}}</td>
                             <td>
                                 @if ($user->status)
                                     <span class="badge badge-success">Activo</span>

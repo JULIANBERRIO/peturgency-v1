@@ -29,6 +29,7 @@
                         <th>Edad</th>
                         <th>Raza</th>
                         <th>Descripcion</th>
+                        <th>Genero</th>
 
                         <th>&nbsp;</th>
                     </tr>
@@ -41,7 +42,8 @@
                             <td> {{ $pet->age }}</td>
                             <td> {{ $pet->race }}</td>
                             <td> {{ $pet->description}}</td>
-                            
+                            <td> {{ $pet->gender}}</td>
+
                             <td class="text-center">
                                 <a href="javascript:void(0)" class="btn btn-sm btn-danger"
                                    onclick="deletePet('{{$pet->id}}')">

@@ -38,9 +38,9 @@
                     <label for="gender">Genero</label>
                     <select name="gender" id="gender" class="form-control">
                         <option>-</option>
-                        <option value="Hombre">Macho</option>
-                        <option value="Mujer">Hembra</option>
-                        
+                        <option value="Macho">Macho</option>
+                        <option value="Hembra">Hembra</option>
+
                     </select>
                 </div>
 
