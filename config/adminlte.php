@@ -243,7 +243,7 @@ return [
             'text' => 'Mascotas',
             'url' => 'admin/mascota',
             'icon' => 'fas fa-paw',
-          
+
         ],
 
 

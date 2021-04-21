@@ -43,16 +43,15 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="role">Perfil</label>
-                    @php(  $set = $user->role )
-                    <select name="role" id="role" class="form-control" required>
-                        <option value="Admin" {{ ($set === 'Admin') ? 'selected' : '' }}>Administrador</option>
-                        <option value="Cliente" {{ ($set === 'Cliente') ? 'selected' : '' }}>Cliente</option>
-                        <option value="Veterinaria" {{ ($set === 'Veterinaria') ? 'selected' : '' }}>
-                            Veterinaria
-                        </option>
-                        <option value="Medico" {{ ($set === 'Medico') ? 'selected' : '' }}>Medico</option>
-                    </select>
+                    <label for="role">Asignar Rol</label>
+                    @foreach($roles as $rol)
+                        <div>
+                            <label for="rol{{$rol->id}}>
+                                <input id="rol{{$rol->id}}" type="checkbox" name="roles" value="{{$rol->id}}">
+                                {{$rol->name}}
+                            </label>
+                        </div>
+                    @endforeach
                 </div>
 
                 <div class="form-group">

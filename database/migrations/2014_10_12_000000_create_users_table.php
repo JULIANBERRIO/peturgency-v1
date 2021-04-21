@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration {
             $table->string('email', 100)->unique();
             $table->string('phone', 15)->nullable();
             $table->string('gender', 20)->nullable();
-            $table->enum('role', ['Admin', 'Cliente', 'Veterinaria', 'Medico'])->default('Cliente');
             $table->boolean('status')->default(1);
             $table->string('password', 100);
             $table->text('profile_photo_path')->nullable();
