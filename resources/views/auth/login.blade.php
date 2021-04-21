@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>loginUsuarios</title>
-	
+
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -32,7 +32,7 @@
            		   </div>
            		</div>
            		<div class="input-div pass">
-           		   <div class="i"> 
+           		   <div class="i">
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
@@ -40,10 +40,10 @@
            		    	<input type="password" name="password" class="input" required>
             	   </div>
             	</div>
-				
+
             	<a href="#">¿Has olvidado tu contraseña? </a>
             	<input class="btn btn-primary bnt-block" type="submit" name="accion" value="Iniciar Sesión">
-                <a href="{{route('index')}}" class="btn btn-primary">Regresar</a>  
+                <a href="{{route('index')}}" class="btn btn-primary">Regresar</a>
             </form>
         </div>
     </div>

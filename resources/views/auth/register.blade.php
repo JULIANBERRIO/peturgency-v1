@@ -31,16 +31,16 @@
                     </div>
                     </div>
                     <div class="input-div pass">
-                    <div class="i"> 
+                    <div class="i">
                         <i class="far fa-envelope"></i>
                     </div>
                     <div class="div">
                             <h5>Correo Electronico</h5>
-                            <input  type="email" name="email" class="input" title="Es obligatorio que ingreses tu e-mail"  required> 
+                            <input  type="email" name="email" class="input" title="Es obligatorio que ingreses tu e-mail"  required>
                     </div>
                     </div>
                     <div class="input-div pass">
-                        <div class="i"> 
+                        <div class="i">
                             <i class="fas fa-phone-square-alt"></i>
                         </div>
                         <div class="div">
@@ -49,7 +49,7 @@
                     </div>
                     </div>
                     <div class="input-div pass">
-                        <div class="i"> 
+                        <div class="i">
                             <i class="fas fa-venus-mars"></i>
                         </div>
                         <div class="div">
@@ -58,21 +58,21 @@
                     </div>
                     </div>
                     <div class="input-div pass">
-                        <div class="i"> 
+                        <div class="i">
                             <i class="fas fa-lock"></i>
                         </div>
                         <div class="div">
                             <h5>Contraseña</h5>
-                            <input type="password"pattern=".{8,}"name="password" placeholder="********" class="input" title="Es obligatorio que ingreses tu Contraseña (Maximo 8 caracteres)" required>
+                            <input type="password"pattern=".{8,}"name="password" placeholder="" class="input" title="Es obligatorio que ingreses tu Contraseña (Maximo 8 caracteres)" required>
                     </div>
                     </div>
-                    
-                    
+
+
                     <a href="#">¿Has olvidado tu contraseña? </a>
                     <input type="submit" class="btn btn-primary bnt-block"  name="accion" value="Registrarse">
                     <a href="{{route('index')}}" class="btn btn-primary">Regresar</a>
-                    
-                    
+
+
                 </form>
             </div>
         </div>
