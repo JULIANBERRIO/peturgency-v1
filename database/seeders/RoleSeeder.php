@@ -28,5 +28,11 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'user-save'])->assignRole($role1);
         Permission::create(['name' => 'user-delete'])->assignRole($role1);
 
+        Permission::create(['name' => 'pet-list'])->assignRole([$role4,$role1]);
+        Permission::create(['name' => 'pet-create'])->assignRole([$role4,$role1]);
+        Permission::create(['name' => 'pet-update'])->assignRole([$role4,$role1]);
+        Permission::create(['name' => 'pet-save'])->assignRole([$role4,$role1]);
+        Permission::create(['name' => 'pet-delete'])->assignRole([$role4,$role1]);
+
     }
 }

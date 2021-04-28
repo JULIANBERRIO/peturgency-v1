@@ -251,7 +251,7 @@ return [
             'text' => 'Mascotas',
             'url' => 'admin/pet',
             'icon' => 'fas fa-paw',
-            'can' => '',
+            'can' => 'pet-list',
 
         ],
 
