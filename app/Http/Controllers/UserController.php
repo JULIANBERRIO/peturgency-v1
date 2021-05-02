@@ -11,10 +11,18 @@ class UserController extends Controller {
 
 
     /**
-     * @return mixed
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     *
+     * se hace una query
+     * Inner join a la tabla model has roles para tener el id del rol y leftjoin busca y muestra el dato que tenga las tablas
+     * Inner join a la tabla roles con el id que sacamos en el otro join para sacar el nombre del rol
+     *
+     * se agrega alias por duplicidad de nombre de atributo
+     *
      */
+
     public function list() {
-        $Users = User::query()  //Hago una query
+        $Users = User::query()  //se hace una query
         ->leftJoin('model_has_roles', 'users.id','=','model_id') //Inner join a la tabla model has roles para tener el id del rol y leftjoin busca y muestra el dato que tenga las tablas
         ->leftJoin('roles','model_has_roles.role_id','=','roles.id') //Inner join a la tabla roles con el id que sacamos en el otro join para sacar el nombre del rol
         ->select([  //Selecciono
@@ -46,6 +54,18 @@ class UserController extends Controller {
      * @param Request $request
      * @param User $user
      * @return \Illuminate\Http\RedirectResponse
+     *
+     * Capturamos los datos enviados por post
+     * Eliminamos los datos vacíos o nulos
+     * Asignamos los datos eviados por POST al modelo de usuario
+     * Asignamos el estado enviado, se realiza aparte por que el array filter lo toma como vacío
+     * Capturamos la contraseña aparte por que no siempre es enviada, y si se envia la codificamos para ser guardada.
+     *
+     * Validamos si el proceso de guardado o actualización se completa
+     * redirigimos el usuario a la vista de la lista
+     *
+     * Redirigimos al usuario a la vista anterior ya sea update o create.
+     *
      */
     public function save(Request $request, User $user) {
 
@@ -58,7 +78,7 @@ class UserController extends Controller {
         if ($password) {
             $user->password = Hash::make($password);
         }
-        if ($user->save()) { // Valisamos si el proceso de guardado o actualización se completa
+        if ($user->save()) { // Validamos si el proceso de guardado o actualización se completa
             return redirect()->route('user-list'); // redirigimos el usuario a la vista de la lista
         }
         return redirect()->back(); // Redirigimos al usuario a la vista anterior ya sea update o create.

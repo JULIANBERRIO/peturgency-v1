@@ -22,12 +22,28 @@ class PetController extends Controller{
     public function update(Pet $pet) {
         return view('pets.update', compact('pet'));
     }
+
+    /**
+     * @param Request $request
+     * @param Pet $pet
+     * @return \Illuminate\Http\RedirectResponse
+     *
+     * Capturamos los datos enviados por post
+     * Eliminamos los datos vacíos o nulos
+     * Asignamos los datos eviados por POST al modelo de usuario
+     *
+     * Validamos si el proceso de guardado o actualización se completa
+     * redirigimos el usuario a la vista de la lista
+     *
+     * Redirigimos al usuario a la vista anterior ya sea update o create.
+     *
+     */
     public function save(Request $request, Pet $pet) {
         $post = $request->post(); // Capturamos los datos enviados por post
         $post = array_filter($post); // Eliminamos los datos vacíos o nulos
         $pet->fill($post); // Asignamos los datos eviados por POST al modelo de usuario
-        
-        if ($pet->save()) { // Validamos si el proceso de guardado o actualización se completa
+
+        if ($pet->save()->assignRole('Cliente')) { // Validamos si el proceso de guardado o actualización se completa
             return redirect()->route('pet-list'); // redirigimos el usuario a la vista de la lista
         }
         return redirect()->back(); // Redirigimos al usuario a la vista anterior ya sea update o create.
@@ -36,6 +52,6 @@ class PetController extends Controller{
     public function delete(Pet $pet) {
         $pet->delete();
         return redirect()->back();
-    
+
     }
 }

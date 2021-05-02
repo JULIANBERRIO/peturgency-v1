@@ -9,9 +9,10 @@ use Spatie\Permission\Models\Permission;
 class RoleSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * se crea los 4 roles con sus nombres
      *
-     * @return void
+     * se crea los permisos a las rutas de las vistas y asu vez asignándole el rol a cada permiso
+     *
      */
     public function run()
     {
