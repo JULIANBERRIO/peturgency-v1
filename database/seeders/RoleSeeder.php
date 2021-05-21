@@ -14,6 +14,7 @@ class RoleSeeder extends Seeder
      * se crea los permisos a las rutas de las vistas y asu vez asignándole el rol a cada permiso
      *
      */
+
     public function run()
     {
         $role1 = Role::create(['name' => 'Admin']);

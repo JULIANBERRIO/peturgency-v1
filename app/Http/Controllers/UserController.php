@@ -32,8 +32,7 @@ class UserController extends Controller {
             'users.status',
             'users.gender',
             'roles.name as nombreRol' //Agregue alias por duplicidad de nombre de atributo
-        ])
-        ->get();
+        ])->get();
 
         return view('users.list', compact('Users'));
     }
@@ -46,7 +45,6 @@ class UserController extends Controller {
 
     public function update(User $user) {
         $roles = Role::all();
-
         return view('users.update', compact('user','roles'));
     }
 
