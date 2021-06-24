@@ -246,6 +246,12 @@ return [
             'can' => 'user-list',
         ],
 
+        [
+            'text' => 'Cita veterinaria',
+            'url' => 'diary',
+            'icon' => 'far fa-calendar-alt',
+            'can' => '',
+        ],
 
         [
             'text' => 'Mascotas',
@@ -256,12 +262,6 @@ return [
         ],
 
 
-
-//        [
-//            'text' => 'Configuración',
-//            'url' => 'settings',
-//            'icon' => 'fas fa-cog',
-//        ],
 //        [
 //            'text' => 'change_password',
 //            'url'  => 'admin/settings',

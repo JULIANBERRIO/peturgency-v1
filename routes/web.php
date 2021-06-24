@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PetController;
+
 
 
 /**
@@ -38,3 +40,9 @@ Route::get('/admin/pet-create', [PetController::class, 'create'])->middleware(['
 Route::get('/admin/pet-update/{pet}', [PetController::class, 'update'])->middleware(['auth:sanctum', 'verified'])->name('pet-update');
 Route::post('/admin/pet-save/{pet?}', [PetController::class, 'save'])->middleware(['auth:sanctum', 'verified'])->name('pet-save');
 Route::delete('/admin/pet-delete/{pet}', [PetController::class, 'delete'])->middleware(['auth:sanctum', 'verified'])->name('pet-delete');
+
+
+Route::get('/diary', [EventController::class, 'index'])->middleware(['auth:sanctum', 'verified'])->name('diary');
+Route::Post('/diary/event-create', [EventController::class, 'store'])->middleware(['auth:sanctum', 'verified'])->name('event-create');
+
+

@@ -49,7 +49,7 @@
                                 @endif
                             </td>
                             <td class="text-center">
-                                <a href="javascript:void(0)" class="btn btn-sm btn-danger"
+                                <a href="javascript:void(0)"  id="delete{{$user->id}}" class="btn btn-sm btn-danger"
                                    onclick="deleteUser('{{$user->id}}')">
                                     <i class="fa fa-trash"></i>
                                     <form action="{{ route('user-delete', $user)}}" id="delete-user-{{$user->id}}"
