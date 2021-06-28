@@ -4,7 +4,7 @@
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/form.css" rel="stylesheet" type="text/css"/>
-   
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -15,15 +15,14 @@
 		<a href="{{route('index')}}">
 			<img src="img/logo.png" alt="" loading="lazy">
 		</a>
-		
+
 		<div class="dropdown">
 			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			Opciones de Inicio Sesión/Registro
 			</a>
-		
+
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<a class="dropdown-item" href="{{route('login')}}">Inicio Sesión Cliente</a>
-			<a class="dropdown-item" href="{{route('login.veterinary')}}">Inicio Sesión veterinaria</a>
 			<a class="dropdown-item" href="{{route('register')}}">Registro Cliente</a>
 			<a class="dropdown-item" href="{{route('register.veterinary')}}">Registro Veterinaria</a>
 			</div>
@@ -49,7 +48,7 @@
                             <input type="text" class="input" name="name" title="Es obligatorio que ingreses tu nombre" required>
                         </div>
                     </div>
-                    
+
                     <div class="input-div pass">
                         <div class="i">
                             <i class="far fa-envelope"></i>
@@ -92,7 +91,7 @@
                                 title="Ingrese una breve descripcion de su veterinaria." required>
                         </div>
                     </div>
-                    
+
                     <div class="input-div pass">
                         <div class="i">
                             <i class="fas fa-lock"></i>
@@ -106,7 +105,7 @@
 
 
                     <a href="#">¿Has olvidado tu contraseña? </a>
-                
+
                     <button type="submit" class="btn btn-primary bnt-block" name="accion" >Registrarse</button>
                     <a href="{{route('index')}}" class="btn btn-primary">Regresar</a>
 

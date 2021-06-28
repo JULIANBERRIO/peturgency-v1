@@ -14,15 +14,14 @@
 		<a href="{{route('index')}}">
 			<img src="img/logo.png" alt="" loading="lazy">
 		</a>
-		
+
 		<div class="dropdown">
 			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			Opciones de Inicio Sesión/Registro
 			</a>
-		
+
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 			<a class="dropdown-item" href="{{route('login')}}">Inicio Sesión Cliente</a>
-			<a class="dropdown-item" href="{{route('login.veterinary')}}">Inicio Sesión veterinaria</a>
 			<a class="dropdown-item" href="{{route('register')}}">Registro Cliente</a>
 			<a class="dropdown-item" href="{{route('register.veterinary')}}">Registro Veterinaria</a>
 			</div>
@@ -80,7 +79,7 @@
                                 <option value="Mujer">Mujer</option>
                                 <option value="Mujer">Otro</option>
                             </select>
-                        </center>   
+                        </center>
                     </div >
                 </div>
             </div>

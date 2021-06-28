@@ -61,10 +61,10 @@ class ExampleTest extends DuskTestCase
 
     public function testDelete(){
         $this->browse(function (Browser $browser){
-            $id = 10;
+            $id = 5;
             $user = User::query()->where('id',$id)->first();
             $browser->visit('/admin/user')
-                ->click('#delete'.$id)
+                ->click('#delete'.$user->id)
                 ->waitForDialog()
                 ->acceptDialog()
                 ->assertDontSee($user->email);
