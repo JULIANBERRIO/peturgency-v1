@@ -9,32 +9,33 @@
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a href="{{route('index')}}">
-			<img src="img/logo.png" alt="" loading="lazy">
-		</a>
-		
-		<div class="dropdown">
-			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Opciones de Inicio Sesión/Registro
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a href="{{route('index')}}">
+				<img src="img/logo.png" alt="" loading="lazy">
 			</a>
-		
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			<a class="dropdown-item" href="{{route('login')}}">Inicio Sesión Cliente</a>
-			<a class="dropdown-item" href="{{route('login.veterinary')}}">Inicio Sesión veterinaria</a>
-			<a class="dropdown-item" href="{{route('register')}}">Registro Cliente</a>
-			<a class="dropdown-item" href="{{route('register.veterinary')}}">Registro Veterinaria</a>
+			
+			<div class="dropdown">
+				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Opciones de Inicio Sesión/Registro
+				</a>
+			
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="{{route('login')}}">Inicio Sesión Cliente</a>
+				<a class="dropdown-item" href="{{route('login.veterinary')}}">Inicio Sesión veterinaria</a>
+				<a class="dropdown-item" href="{{route('register')}}">Registro Cliente</a>
+				<a class="dropdown-item" href="{{route('register.veterinary')}}">Registro Veterinaria</a>
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
+<body>
 	<img class="wave" src="img/wave.svg">
+    
 	<div class="container">
 		<div class="img">
 			<img src="img/bg.png">
 		</div>
 		<div class="login-content">
-			<form action="{{route('login')}}" method="post">
+			<form action="{{route('register.veterinary')}}" method="post">
                 @csrf
 				<img src="img/favicon.png">
 				<br>
@@ -60,7 +61,7 @@
             	</div>
 
             	<a href="#">¿Has olvidado tu contraseña? </a>
-            	<input class="btn btn-primary bnt-block" type="submit" name="accion" value="Iniciar Sesión">
+            	<button class="btn btn-primary bnt-block" type="submit" name="accion">Iniciar Sesión</button>
                 <a href="{{route('index')}}" class="btn btn-primary">Regresar</a>
             </form>
         </div>

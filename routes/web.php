@@ -6,6 +6,18 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PetController;
 
+/**
+ * Rutas de registro y login veterinaria
+ */
+Route::get('/register.veterinary', function(){
+
+    return view("auth.registerVt");
+})->name ("register.veterinary");
+
+Route::get('/login-veterinary', function(){
+
+    return view("auth.veterinaryLogin");
+})->name ("login.veterinary");
 
 
 /**
